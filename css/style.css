@@ -15,3 +15,16 @@ body{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     width: 300px;
 }
+
+.display{
+    background-color: rgb(45, 39, 39);
+    color: lawngreen;
+    font-size: 24px;
+    padding: 20px;
+    text-align: right;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    min-height: 40px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
