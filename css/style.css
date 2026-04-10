@@ -5,7 +5,7 @@ body{
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: aliceblue;
+    background-color: rgb(179, 139, 102);
 }
 
 .calculator{
@@ -35,17 +35,32 @@ body{
     gap: 10px;
 }
 
-.equal{
-    grid-column: span 2;
-    border-radius: 20px;
-    background-color: lightgreen;
-}
+        button:hover {
+            background-color: #777;
+        }
+        button.operator {
+            background-color: #ff9500;
+        }
+        button.operator:hover {
+            background-color: #ffb143;
+        }
+        button.equal {
+            grid-column: span 2;
+            border-radius: 20px;
+            background-color: rgb(75, 165, 75);   
+        }
+        button.equal:hover {
+            background-color: #66bb6a;
+        }
+        button.clear {
+            grid-column: span 2;
+            border-radius: 20px;
+            background-color: rgb(229, 39, 55);
+        }
+        button.clear:hover {
+            background-color: #ef5350;
+        }
 
-.clear{
-    grid-column: span 2;
-    border-radius: 20px;
-    background-color: orange;
-}
 
 button{
     padding: 20px;
@@ -54,7 +69,7 @@ button{
     border-radius: 50%;
     cursor: pointer;
     background-color: #555;
-    color: rgb(2, 2, 2);
+    color: rgb(255, 255, 255);
     font-weight: bold;
     
 }
