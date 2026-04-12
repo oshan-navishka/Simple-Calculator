@@ -38,8 +38,7 @@
             <button onclick="appendNumber('.')">.</button>
             <button onclick="appendNumber('0')">0</button>
             <button class="equal" onclick="calculate()">=</button>
-            
-        </button> 
+        
         </div>
     </div>
 
@@ -95,7 +94,7 @@
             updateDisplay();
         }
 
-        function Calculate(){
+        function calculate(){
             try{
                 const tokens = displayValue.trim().split(' ').filter(Boolean);
                 if(tokens.length < 3) return;
@@ -123,7 +122,7 @@
 
         function clearDisplay(){
             displayValue = '0';
-            upadateDisplay();
+            updateDisplay();
         }
 
 
