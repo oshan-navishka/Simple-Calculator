@@ -45,7 +45,7 @@
 
     <script src="js/calculator.js"></script>
     <script>
-        const calculator = new calculator();
+        const calculator = new Calculator();
         let displayValue = '0';
 
         function isOperator(token){
@@ -62,7 +62,7 @@
         }
             
 
-        function upadateDisplay(){
+        function updateDisplay(){
             document.getElementById('display').textContent = displayValue;
         }
 
@@ -77,7 +77,22 @@
             }else{
                 displayValue += number;
             }
-            upadateDisplay();
+            updateDisplay();
+        }
+
+        function appendOperator(op) {
+            if (displayValue === '0') return;
+
+            const parts = displayValue.trim().split(' ');
+            const lastPart = parts[parts.length - 1];
+
+            if (isOperator(lastPart)) {
+                parts[parts.length - 1] = op;
+                displayValue = parts.join(' ');
+            } else {
+                displayValue += ' ' + op + ' ';
+            }
+            updateDisplay();
         }
 
         function Calculate(){
@@ -99,10 +114,10 @@
                     result = runOperation(result , operator , next);
                 }
                 displayValue = result.toString();
-                upadateDisplay();
+                updateDisplay();
             }catch(error){
                 displayValue = 'Error';
-                upadateDisplay();
+                updateDisplay();
             }
         }
 
